@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>FeedBack Project using modelforms</title>
+	<style> *{ font-size:40px; } </style>
+</head>
+<body>
+<center>
+	<h1> FeedBack Form </h1>
+	<form method="POST">
+	{% csrf_token %}
+	<table border="3">
+		{{ fm.as_table }}
+	</table>
+		<br>
+		<br>
+		<br>
+		<input type="submit">
+	</form>
+	{{ msg }}
+</center>
+</body>
+</html>
